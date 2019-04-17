@@ -12,9 +12,23 @@ def translate(word):
     word = word.lower()
     if word in json_data:
         return json_data[word]
+    elif len(get_close_matches(word, json_data.keys())) > 0:
+        yn = input("Did you mean to write %s instead? Y or N? " % get_close_matches(word, json_data.keys())[0])
+        if yn == "y":
+            return json_data[get_close_matches(word, json_data.keys())[0]]
+        elif yn == "n":
+            return "That is not a word. Please double check it."
+        else:
+            return "Sorry, your query is not understood."
     else:
         print("That is not a word. Please double check it.")
 
 word = input("Type in a word in English: ")
 
-print(translate(word))
+output = (translate(word))
+
+if type(output) == list:
+    for item in output:
+        print(item)
+else:
+    print(output)
