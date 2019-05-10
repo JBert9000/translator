@@ -5,3 +5,6 @@ I am following one of the tutorials from this course: https://www.udemy.com/the-
 I got my own json formated file as a dictionary source from this URL: https://raw.githubusercontent.com/hathibelagal/German-English-JSON-Dictionary/master/english_german.json
 
 Got the English to Polish data from here: https://raw.githubusercontent.com/djstrong/PL-Wiktionary-To-Dictionary/master/dictionaries/english_polish.txt
+
+
+Creating a GUI using tkinter and this site as a starting point: https://likegeeks.com/python-gui-examples-tkinter-tutorial/
