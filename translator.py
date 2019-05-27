@@ -1,33 +1,12 @@
 import json
 from difflib import SequenceMatcher
 from difflib import get_close_matches
-from tkinter import *
 
 with open("data.json") as json_file:
     json_data = json.load(json_file)
 # data = json.load(open("data.json"))
 
-window = Tk()
-window.title("ist alles gut")
-window.geometry('350x200')
-
-lbl = Label(window, text="Hello")
-lbl.grid(column=0, row=0)
-
-txt = Entry(window, width=10)
-txt.grid(column=1, row=0)
-
-def clicked():
-    lbl.configure(text="Button was clicked")
-
-btn = Button(window, text="Click Me", command=clicked, bg="orange", fg="red")
-btn.grid(column=2, row=0)
-
-
-
-window.mainloop()
-
-
+word = input("Type in a word in English: ")
 
 # takes the user input as an argument and looks through the JSON file for a match.
 def translate(word):
@@ -45,7 +24,7 @@ def translate(word):
     else:
         print("That is not a word. Please double check it.")
 
-word = input("Type in a word in English: ")
+    translate = True
 
 output = (translate(word))
 
@@ -54,4 +33,3 @@ if type(output) == list:
         print(item)
 else:
     print(output)
-
