@@ -24,7 +24,8 @@ def translate(word):
     else:
         print("That is not a word. Please double check it.")
 
-    translate = True
+while translate():
+    
 
 output = (translate(word))
 
